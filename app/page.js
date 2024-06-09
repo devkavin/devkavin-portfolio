@@ -1,4 +1,5 @@
 import { getBlogs } from "@/utils/fetchBlogs";
+import { Analytics } from "@vercel/analytics/react";
 import AboutSection from "./components/homepage/about";
 import Blog from "./components/homepage/blog";
 import ContactSection from "./components/homepage/contact";
@@ -21,6 +22,7 @@ export default async function Home() {
       <Education />
       <Blog blogs={blogs} />
       <ContactSection />
+      <Analytics />
     </>
   );
 };
