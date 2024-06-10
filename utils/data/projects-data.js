@@ -11,6 +11,7 @@ export const projectsData = [
         role: 'Backend Developer',
         code: '',
         demo: '',
+        tags: ['Laravel', 'MySQL', 'Chrome DevTools', 'VSCode', 'PHP', 'Postman', 'Git', 'Figma', 'Jira', 'JavaScript', 'HTML', 'CSS', 'Bootstrap'],
         image: sltMobitelLogo,
     },
     {
@@ -20,7 +21,8 @@ export const projectsData = [
         tools: ['Liferay', 'HTML', 'Chrome DevTools'],
         role: 'Frontend Developer',
         code: '',
-        demo: '',
+        demo: 'https://ooredoo.dz/fr/',
+        tags: ['Liferay', 'HTML', 'Chrome DevTools'],
         image: ooredoo,
     },
     {
@@ -30,7 +32,8 @@ export const projectsData = [
         tools: ['Laravel Lumen', 'PHP', 'MySQL', 'Postman', 'VSCode', 'Git', 'Jira'],
         role: 'Backend Developer',
         code: '',
-        demo: '',
+        demo: 'https://www.moolee.mv/',
+        tags: ['Laravel Lumen', 'PHP', 'MySQL', 'Postman', 'VSCode', 'Git', 'Jira'],
         image: ooredoo,
     },
     // {

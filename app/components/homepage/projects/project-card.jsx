@@ -1,6 +1,8 @@
 // @flow strict
 
 import * as React from 'react';
+import Link from 'next/link';
+import { FaCode, FaPlay } from 'react-icons/fa';
 
 function ProjectCard({ project }) {
 
@@ -16,8 +18,14 @@ function ProjectCard({ project }) {
           <div className="h-2 w-2 lg:h-3 lg:w-3 rounded-full bg-orange-400"></div>
           <div className="h-2 w-2 lg:h-3 lg:w-3 rounded-full bg-green-200"></div>
         </div>
-        <p className="text-center ml-3 text-[#16f2b3] text-base lg:text-xl">
-          {project.name}
+        <p className="text-center ml-3 text-[#16f2b3] text-base lg:text-xl cursor-pointer hover:text-[#ff00ff]">
+          {project.demo !== "" ? (
+            <Link role="link" href={project.demo} target="_blank">
+              <span>{project.name}</span>
+            </Link>
+          ) : (
+            <span>{project.name}</span>
+          )}
         </p>
       </div>
       <div className="overflow-hidden border-t-[2px] border-indigo-900 px-4 lg:px-8 py-4 lg:py-8">
@@ -29,7 +37,7 @@ function ProjectCard({ project }) {
             <span className="text-gray-400">{'{'}</span>
           </div>
           <div>
-            <span className="ml-4 lg:ml-8 mr-2 text-white">name:</span>
+            <span className="ml-4 lg:ml-8 mr</button>-2 text-white">name:</span>
             <span className="text-gray-400">{`'`}</span>
             <span className="text-amber-300">{project.name}</span>
             <span className="text-gray-400">{`',`}</span>
@@ -49,20 +57,43 @@ function ProjectCard({ project }) {
                 </React.Fragment>
               ))
             }
-            <span className="text-gray-400">{"],"}</span>
+            <span className="text-gray-400">{"'],"}</span>
           </div>
           <div>
             <span className="ml-4 lg:ml-8 mr-2 text-white">myRole:</span>
+            <span className="text-gray-400">{`'`}</span>
             <span className="text-orange-400">{project.role}</span>
-            <span className="text-gray-400">,</span>
+            <span className="text-gray-400">{`',`}</span>
           </div>
           <div className="ml-4 lg:ml-8 mr-2">
             <span className="text-white">description:</span>
-            <span className="text-cyan-400">{' ' + project.description}</span>
-            <span className="text-gray-400">,</span>
+            <span className="text-gray-400">{` "`}</span>
+            <span className="text-cyan-400">{project.description}</span>
+            <span className="text-gray-400">{`",`}</span>
           </div>
           <div><span className="text-gray-400">{`};`}</span></div>
         </code>
+        <div className="pt-5">
+          <div className="flex items-center justify-center space-x-4 pt">
+            {project.demo !== "" ? (
+              <Link
+                href={project.demo}
+                target='_blank'
+                className="flex justify-center items-center w-10 h-10 rounded-full border-2 border-[#16f2b3] text-[#EFF3F4] transition-all duration-300 hover:bg-[#231d4b] hover:text-violet-600 hover:border-[#0F0C41] hover:scale-110 decoration-clone cursor-pointer no-underline delay-[0.3s]">
+                <FaPlay />
+              </Link>
+            ) : null}
+            {project.code !== "" ? (
+              <Link
+                href={project.code}
+                target='_blank'
+                className="flex justify-center items-center w-10 h-10 rounded-full border-2 border-[#16f2b3] text-[#EFF3F4] transition-all duration-300 hover:bg-[#231d4b] hover:text-violet-600 hover:border-[#0F0C41] hover:scale-110 cursor-pointer no-underline  delay-[0.3s] group-hover:translate-x-[-140px]">
+                <FaCode />
+              </Link>
+            ) : null}
+          </div>
+        </div>
+
       </div>
     </div>
   );
