@@ -15,5 +15,5 @@ export const personalData = {
   // twitter: 'https://twitter.com/devkavinhq',
 
   // hashnodeUsername: "devkavin",
-  resume: "https://drive.google.com/"
+  resume: "https://drive.google.com/file/d/14IeAzrqshN4ZZ_nXhgwg5lx2_krPnqnO/view?usp=sharing"
 }
